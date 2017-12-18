@@ -41,7 +41,7 @@ h1 {
   display: block; 
   position: fixed; 
   z-index: 1; 
-  padding-top: 100px; 
+  padding-top: 80px; 
   left: 0;
   top: 0;
   width: 100%; 
@@ -53,10 +53,9 @@ h1 {
 
 .modal img{
   width: 450px;
-  height: 100vh;
-  display: inline-block;
+  height: 200px;
   max-height: 400px;
-  vertical-align: middle;
+  float: left;
   
 }
 .information{
