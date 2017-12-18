@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="characters">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <script src="./vendors/angular.js"></script>
+    
+    <title>Personagens Game of Thrones</title>
+</head>
+<body ng-controller="main">
+    <div class="row">
+            <input type="text" placeholder="Pesquisar" ng-model="pesquisa" name="" class="inputSearch"><!-- input para pegar o valor a ser filtrado-->
+            </div>
+            <div class="cards">
+        <div class="card" ng-repeat="personagem in personagens | filter:{name: pesquisa}"><!--Div reponsável pelos cards, onde personagens são todos personagens e personagem é o da atual repetição-->
+            <div class="wrapper" style="background:url('{{personagem.imageLink ? urlBase+personagem.imageLink :'https://avatars.io/twitter/gameofthrones'}}') center/cover no-repeat"><!-- Style responsável por definir a imagem de fundo do card, qunado a API não retorna uma imagem é então usado uma imagem padrão-->
+            <div class="data">
+                <div class="content" href=""  ng-click="Show(personagem)">
+                <h1 class="title"><a href="">{{personagem.name}}</a></h1>
+                <p class="text">{{personagem.house}}</p>
+                <a class="button" href="">Read more</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

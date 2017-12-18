@@ -1,0 +1,226 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          font-family: "Open Sans", sans-serif;
+}
+
+body {
+ background-color: #fff; 
+ 
+}
+
+.inputSearch{
+    width:424px;
+    height:40px;
+    border-style: 1px solid #BABABA;
+    padding:5px;
+    display:block;
+    margin-bottom:32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.row {
+  max-width: 1000px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+.cards{
+  margin:0 auto;
+  max-width: 1000px ;
+}
+.modal {
+  display: block; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal img{
+  width: 450px;
+  height: 100vh;
+  display: inline-block;
+  max-height: 400px;
+  vertical-align: middle;
+  
+}
+.information{
+  display:inline-block;
+  margin-left:30px;
+  max-width: 51%;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0 20px 0 0;
+  max-height: auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card {
+  display:inline-block;
+  overflow: hidden;
+  margin-right: 10px;
+  width: 32%;
+  margin-bottom: 8px;
+  min-width: 320px;
+}
+.card .menu-content {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.card .menu-content::before, .card .menu-content::after {
+  content: '';
+  display: table;
+}
+.card .menu-content::after {
+  clear: both;
+}
+.card .menu-content li {
+  display: inline-block;
+}
+.card .menu-content a {
+  color: #fff;
+}
+
+.card .wrapper {
+  background-color: #fff;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+.card .wrapper:hover .data {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: translateY(calc(70px + 1em));
+          transform: translateY(calc(70px + 1em));
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+}
+.card .data .content {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+}
+.card .title {
+  margin-top: 10px;
+}
+.card .text {
+  height: 70px;
+  margin: 0;
+}
+.card input[type='checkbox'] {
+  display: none;
+}
+.card input[type='checkbox']:checked + .menu-content {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+}
+
+.card .data {
+  color: #fff;
+  -webkit-transform: translateY(calc(70px + 4em));
+          transform: translateY(calc(70px + 4em));
+}
+.card .title a {
+  color: #fff;
+}
+.card .button {
+  display: block;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+}
+.card .button::after {
+  content: '\2192';
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.card .button:hover::after {
+  -webkit-transform: translate(5px, -50%);
+          transform: translate(5px, -50%);
+  opacity: 1;
+}
+@media screen and (max-width:1319px){
+  .information{
+    font-size: 15px;
+  }
+  .modal img{
+    display: block;
+    height: 200px;
+    width: 55%;
+    margin: 0px;
+  }
+  .modal-content{
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width:768px){
+  .card{
+    display:block;
+      width: 80%;
+      margin:10px auto;
+  }
+  .inputSearch{
+    margin:30px auto;
+    max-width: 80%
+  }
+  .information{
+    display: block;
+    margin: 0px; 
+    font-size: 10px;
+  }
+}
+
+
